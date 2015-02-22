@@ -16,7 +16,8 @@ These signals were used to estimate variables of the feature vector for each pat
 * The data were then summarized across observations by activity and subject by calculating the means of the mean and standard deviation columns extracted above. 
 * The summarized, tidy dataset is output as "testtrain.txt", which contains a row for each activity for each subject and the mean value for each metric across each of the three dimensions and the mean of the standard deviation calculated for each of those metrics for each observation.
 
-# **Code dictionary for traintext.txt** (note that the column names for fulldataset.txt are similar, but the data are not summarized and thus represent all provided observations for the respective variable):
+# **Code dictionary for traintext.txt:** 
+###note that the column names for fulldataset.txt are similar, but the data are not summarized and thus represent all provided observations for the respective variable
 * subject: the id of the human subject
 * activityid: the activity described by the data in the following columns
 
