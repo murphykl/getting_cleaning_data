@@ -52,10 +52,12 @@ run_analysis<-function(fldr){
 # rearranging columns
   full$activityid<-full$activity
   full$activity<-NULL
+# output full, raw dataset
+  write.table(full, file="fulldataset.txt", row.names=FALSE, col.names=TRUE)
 # melt data for reshaping
   mfull<-melt(full, id=(c("subject", "activityid")))
 # cast in wide form
   cfull<-cast(mfull, subject+activityid ~ variable, mean)
 # output data to file
-  write.table(cfull, file="testtrain.txt", row.name=FALSE)
+  write.table(cfull, file="testtrain.txt", row.names=FALSE, col.names=TRUE)
 }
